@@ -2,7 +2,7 @@ package ru.itsjava.homeWork.hwDog;
 
 public class Dog {
     private final String size;
-    private String color;
+    private final String color;
 
     public Dog(String size, String color) {
         this.size = size;

@@ -2,7 +2,7 @@ package ru.itsjava.homeWork.hwBirds;
 
 public class Birds {
     private final String beakShapes;
-    private String plumageColor;
+    private final String plumageColor;
 
     public Birds(String beakShapes, String plumageColor) {
         this.beakShapes = beakShapes;
