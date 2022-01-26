@@ -2,18 +2,17 @@ package ru.itsjava.oop;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @AllArgsConstructor
 @Data
+@RequiredArgsConstructor
 public class Telephone {
 
     private final String brand;
     private boolean isHomey;
 
-    public Telephone(String brand) {
-        this.brand = brand;
-    }
-//
+    //
 //    public Telephone(String brand, boolean isHomey) {
 //        // В equals сравнивается brand с brand
 //        this.brand = brand;
