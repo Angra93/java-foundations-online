@@ -1,5 +1,4 @@
 package ru.itsjava.git;
 
-public class MyClass {
-
+public class MyClass2 {
 }
