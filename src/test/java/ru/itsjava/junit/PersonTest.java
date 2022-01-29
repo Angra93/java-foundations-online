@@ -51,8 +51,6 @@ public class PersonTest {
     public void shouldHaveCorrectTakeBeer(){
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
         Person actualPerson2 = new Person(NEW_NAME, NEW_AGE);
-        actualPerson.takeBeer();
-        actualPerson2.takeBeer();
 
         assertTrue(actualPerson.takeBeer());
         assertFalse(actualPerson2.takeBeer());
