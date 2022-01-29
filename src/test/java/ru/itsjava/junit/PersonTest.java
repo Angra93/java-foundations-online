@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Класс Person должен: ")
 public class PersonTest {
 
-    public static final String DEFAULT_NAME = "Vova";
+    public static final String DEFAULT_NAME = "Vova";   //  <-- Как быстро их вставить, а не писать вручную?
     public static final int DEFAULT_AGE = 23;
     public static final String NEW_NAME = "Anna";
     public static final int NEW_AGE = 35;
