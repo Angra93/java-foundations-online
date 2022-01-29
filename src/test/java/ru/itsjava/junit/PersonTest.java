@@ -11,7 +11,7 @@ public class PersonTest {
     public static final String DEFAULT_NAME = "Vova";   //  <-- Как быстро их вставить, а не писать вручную?
     public static final int DEFAULT_AGE = 23;
     public static final String NEW_NAME = "Anna";
-    public static final int NEW_AGE = 35;
+    public static final int NEW_AGE = 16;
 
     @DisplayName(" корректно создаваться конструктором")
     @Test
@@ -23,35 +23,38 @@ public class PersonTest {
 
     }
 
-    @DisplayName(" коректно работают изменения")
+    @DisplayName(" корректно измененяет имя и возраст")
     @Test
     public void shouldHaveCorrectUpdate() {
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
         actualPerson.setName(NEW_NAME);
         actualPerson.setAge(NEW_AGE);
 
-        assertEquals(NEW_NAME, actualPerson.getName());
-        assertEquals(NEW_AGE, actualPerson.getAge());
+//        assertEquals(NEW_NAME, actualPerson.getName());
+//        assertEquals(NEW_AGE, actualPerson.getAge());
+        assertAll("actualPerson", ()-> assertEquals(NEW_NAME, actualPerson.getName()),
+                ()-> assertEquals(NEW_AGE, actualPerson.getAge()));
     }
 
-    @DisplayName(" корректно добавлять возраст на 1")
+    @DisplayName(" корректно добавлять возраст на 1 в день рождения")
     @Test
     public void shouldHaveCorrectAddAge() {
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
-        Person actualPerson2 = new Person(NEW_NAME, NEW_AGE);
         actualPerson.birthday();
-        actualPerson2.birthday();
 
         assertEquals(DEFAULT_AGE + 1, actualPerson.getAge());
-        assertEquals(NEW_AGE + 1, actualPerson2.getAge());
+
     }
 
-    @DisplayName(" корректно проверяет возраст")
+    @DisplayName(" корректно проверяет возраст для покупки пива")
     @Test
     public void shouldHaveCorrectTakeBeer(){
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
+        Person actualPerson2 = new Person(NEW_NAME, NEW_AGE);
         actualPerson.takeBeer();
+        actualPerson2.takeBeer();
 
         assertTrue(actualPerson.takeBeer());
+        assertFalse(actualPerson2.takeBeer());
     }
 }
