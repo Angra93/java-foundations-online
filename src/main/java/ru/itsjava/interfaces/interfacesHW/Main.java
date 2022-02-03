@@ -1,11 +1,16 @@
-package ru.itsjava.interfacesHW;
+package ru.itsjava.interfaces.interfacesHW;
 
 public class Main {
     public static void main(String[] args) {
-        Man vova = new Man();
-        Dog bobik = new Dog();
+//        Man vova = new Man();
+//        Dog bobik = new Dog();
         Cat murzik = new Cat();
         Bird bird = new Bird();
+
+        Runnable vova = new Man();
+        Runnable bobik = new Dog();
+
+
 
         System.out.println("Vova: ");
         vova.walk();

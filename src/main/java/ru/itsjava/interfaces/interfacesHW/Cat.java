@@ -1,4 +1,4 @@
-package ru.itsjava.interfacesHW;
+package ru.itsjava.interfaces.interfacesHW;
 
 public class Cat implements Walkable, Runnable{
     @Override

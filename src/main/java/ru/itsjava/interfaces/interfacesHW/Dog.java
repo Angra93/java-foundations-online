@@ -1,4 +1,4 @@
-package ru.itsjava.interfacesHW;
+package ru.itsjava.interfaces.interfacesHW;
 
 public class Dog implements Walkable, Runnable{
     @Override
