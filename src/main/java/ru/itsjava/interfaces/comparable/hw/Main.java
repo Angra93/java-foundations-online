@@ -1,4 +1,4 @@
-package ru.itsjava.comparable.hw;
+package ru.itsjava.interfaces.comparable.hw;
 
 import java.util.Arrays;
 

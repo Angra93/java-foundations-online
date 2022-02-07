@@ -9,5 +9,7 @@ public class InterfacesPractice {
         Creatable badGin = new BadGin();
         badGin.createWish();
 
+        khotabich.canYouCreateWish();
+        badGin.canYouCreateWish();
     }
 }

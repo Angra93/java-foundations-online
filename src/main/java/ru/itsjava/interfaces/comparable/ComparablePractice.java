@@ -1,4 +1,4 @@
-package ru.itsjava.comparable;
+package ru.itsjava.interfaces.comparable;
 
 import java.util.Arrays;
 

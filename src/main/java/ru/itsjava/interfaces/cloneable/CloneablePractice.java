@@ -1,4 +1,4 @@
-package ru.itsjava.cloneable;
+package ru.itsjava.interfaces.cloneable;
 
 public class CloneablePractice {
 
