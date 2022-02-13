@@ -3,7 +3,7 @@ package ru.itsjava.exceptions.exceptionHW;
 public class Main {
     public static void main(String[] args) {
 
-        Person person = new Person("Vova", 24);
+        Person person = new Person("Vova", -24);
 
         try {
             person.printAge();
