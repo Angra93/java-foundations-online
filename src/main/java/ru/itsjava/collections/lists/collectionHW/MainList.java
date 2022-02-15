@@ -24,7 +24,7 @@ public class MainList {
         books.add(masterAndMargarita);
         books.add(grokkingAlgorithms);
 
-        int num = 1;
+        int num = 0;
         for (Book bookList : books) {
             System.out.print(num + " ");
             System.out.println(bookList);
@@ -45,20 +45,24 @@ public class MainList {
             num2++;
         }
         System.out.println();
+        System.out.println("Получить 1й элемент, и последний");
         System.out.println("books.get(1) = " + books.get(1));
         System.out.println("books.get(books.size()-1) = " + books.get(books.size() - 1));
         System.out.println();
 
+        System.out.println("Удалить по имени и индексу: ");
         System.out.println("books.remove(theWonderfulWizardOfOz) = " + books.remove(theWonderfulWizardOfOz));
-        System.out.println("books.remove(masterAndMargarita) = " + books.remove(masterAndMargarita));
+        System.out.println("books.remove(5) = " + books.remove(4));
         int num3 = 0;
         for (Book bookList : books) {
             System.out.print(num3 + " ");
             System.out.println(bookList);
             num3++;
         }
+        System.out.println("Проверяет на наличе элемента: ");
         System.out.println("books.contains(thinkingInJava) = " + books.contains(thinkingInJava));
         System.out.println();
+        System.out.println("Вывести список на экран в формате: List: ");
         System.out.println(books);
     }
 }
