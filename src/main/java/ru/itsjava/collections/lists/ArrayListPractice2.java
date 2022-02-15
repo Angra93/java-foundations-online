@@ -1,4 +1,4 @@
-package ru.itsjava.collections.lists.collectionHW;
+package ru.itsjava.collections.lists;
 
 import ru.itsjava.collections.lists.Watch;
 
