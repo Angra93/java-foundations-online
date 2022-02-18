@@ -1,6 +1,5 @@
 package ru.itsjava.collections.lists;
 
-import ru.itsjava.collections.lists.Watch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,6 +15,7 @@ public class ArrayListPractice2 {
         List<Watch> watches = new ArrayList<>(Arrays.asList(vitaliySeiko, viktorSeiko, dmitriySeiko, valentinOmega));
         System.out.println("Наши часы: " + watches);
         System.out.println();
+
 
         System.out.println("Вывести все часы у которых фирма Saiko");
         // Пробегаемся по Watch

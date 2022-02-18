@@ -1,5 +1,6 @@
 package ru.itsjava.collections.lists.collectionHW;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +24,11 @@ public class MainList {
         books.add(littlePrince);
         books.add(masterAndMargarita);
         books.add(grokkingAlgorithms);
+
+        books.add(new Book("Java", "Book", 123));
+        books.add(new Book("Java 2", "Book", 123));
+        books.add(new Book("Java 3", "Book", 123));
+
 
         int num = 0;
         for (Book bookList : books) {
@@ -59,10 +65,60 @@ public class MainList {
             System.out.println(bookList);
             num3++;
         }
+        System.out.println();
         System.out.println("Проверяет на наличе элемента: ");
         System.out.println("books.contains(thinkingInJava) = " + books.contains(thinkingInJava));
+
         System.out.println();
         System.out.println("Вывести список на экран в формате: List: ");
         System.out.println(books);
+        System.out.println();
+
+//        6. Отфильтровать список вернуть записи по некоторому условию:
+        System.out.println("Условие на индекс: Индекс делится на 3");
+        for (int i = 0; i < books.size() - 1; i++) {
+            if (i % 3 == 0) {
+                System.out.println(books.get(i));
+            }
+        }
+
+        System.out.println("\n" + "Условие на значение: Вернуть количество книг, которые равны \"Java\"");
+        int num4 = 0;
+        for (Book list : books) {
+            if (list.getTitle().contains("Java")) {
+                System.out.println(list);
+                num4++;
+            }
+        }
+        System.out.println(num4 + "\n");
+
+        // 7. Пропустить несколько первых элементов
+        System.out.println(("Пропустить первые 3 книги в списке."));
+        for (int i = 3; i < books.size(); i++) {
+            System.out.println(books.get(i));
+        }
+
+        // Пропускаем элементы, которые удовлетворяют некоторому условию
+        System.out.println(("\n" + "Пропустить первые 2 книги, которые равные \"Java\""));
+        for (int i = 2; i < books.size(); i++) {
+            //   if (books.contains("Java")){
+            if (books.get(i).getTitle().contains("Java"))
+                //System.out.println(books.get(i).getTitle().contains("Java"));
+                System.out.println(books.get(i));
+            //   }    Не получается правильно составить логику
+        }
+
+        // 8. Вернуть первый подходящий элемент:
+        System.out.println("\n" + "Возвращаем первую книгу, длина автора которого делится на 3");
+        for (int i = 0; i < books.size(); i++) {
+//            if (books.size(book.getAuthor()) % 3) {
+            //   if (books.indexOf(i) % 3) {
+            //for (Book book : books) {
+            //   if (book.getAuthor().length() % 3) {
+            if (books.get(i).getAuthor().length() % 3 == 0) {
+                System.out.println(books.get(i));
+                break;
+            }
+        }
     }
 }
