@@ -101,20 +101,14 @@ public class MainList {
         // Пропускаем элементы, которые удовлетворяют некоторому условию
         System.out.println(("\n" + "Пропустить первые 2 книги, которые равные \"Java\""));
         for (int i = 2; i < books.size(); i++) {
-            //   if (books.contains("Java")){
             if (books.get(i).getTitle().contains("Java"))
-                //System.out.println(books.get(i).getTitle().contains("Java"));
                 System.out.println(books.get(i));
-            //   }    Не получается правильно составить логику
+            //      Не получается правильно составить логику. Не уверен то правильно сделал
         }
 
         // 8. Вернуть первый подходящий элемент:
         System.out.println("\n" + "Возвращаем первую книгу, длина автора которого делится на 3");
-        for (int i = 0; i < books.size(); i++) {
-//            if (books.size(book.getAuthor()) % 3) {
-            //   if (books.indexOf(i) % 3) {
-            //for (Book book : books) {
-            //   if (book.getAuthor().length() % 3) {
+        for (int i = 0; i < books.size(); i++) {//
             if (books.get(i).getAuthor().length() % 3 == 0) {
                 System.out.println(books.get(i));
                 break;
