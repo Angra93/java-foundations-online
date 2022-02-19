@@ -121,5 +121,28 @@ public class MainList {
                 System.out.println(books.get(i));
             }
         }
+
+        List<Person> personList = new ArrayList<>();
+        Person nikolai = new Person("Николай", 21, 'М');
+        Person nikita = new Person("Никита", 28, 'М');
+        Person marina = new Person("Марина", 24, 'Ж');
+        Person vova = new Person("Вова", 15, 'М');
+        personList.add(nikolai);
+        personList.add(nikita);
+        personList.add(marina);
+        personList.add(vova);
+        personList.add(new Person("Нелли", 24, 'Ж'));
+
+        System.out.println(("\n" + "Вернуть всех военнообязанных мужчин (пол), " +
+                "которым меньше 27 и больше 18 и имя которых начинается на 'Н'"));
+
+        for (Person person : personList) {
+            if (person.getAge() < 27 && person.getAge() > 18 && person.getName().contains("Н") &&
+            person.getIsMale('М')) {
+
+                System.out.println(person);
+            }
+        }
+
     }
 }
