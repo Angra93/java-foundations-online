@@ -120,5 +120,12 @@ public class MainList {
                 break;
             }
         }
+        // 9. Возвращаем все элементы удовлетворяющие условию:
+        System.out.println(("\n" + "Возвращаем все книги, длина автора которых делится на 3"));
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getAuthor().length() % 3 == 0) {
+                System.out.println(books.get(i));
+            }
+        }
     }
 }
