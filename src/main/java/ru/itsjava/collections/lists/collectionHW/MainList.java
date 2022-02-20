@@ -103,7 +103,7 @@ public class MainList {
         for (int i = 2; i < books.size(); i++) {
             if (books.get(i).getTitle().contains("Java"))
                 System.out.println(books.get(i));
-            //      Не получается правильно составить логику. Не уверен то правильно сделал
+            //                                      Не уверен что правильно сделал задание
         }
 
         // 8. Вернуть первый подходящий элемент:
