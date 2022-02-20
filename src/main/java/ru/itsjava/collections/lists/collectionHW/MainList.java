@@ -127,22 +127,36 @@ public class MainList {
         Person nikita = new Person("Никита", 28, 'М');
         Person marina = new Person("Марина", 24, 'Ж');
         Person vova = new Person("Вова", 15, 'М');
+        Person natasha = new Person("Наташа", 25, 'Ж');
         personList.add(nikolai);
         personList.add(nikita);
         personList.add(marina);
         personList.add(vova);
-        personList.add(new Person("Нелли", 24, 'Ж'));
+        personList.add(natasha);
+        personList.add(new Person("Лена", 27, 'Ж'));
 
         System.out.println(("\n" + "Вернуть всех военнообязанных мужчин (пол), " +
                 "которым меньше 27 и больше 18 и имя которых начинается на 'Н'"));
 
         for (Person person : personList) {
             if (person.getAge() < 27 && person.getAge() > 18 && person.getName().contains("Н") &&
-            person.getIsMale('М')) {
+                    person.getIsMale('М')) {
 
                 System.out.println(person);
             }
         }
+        System.out.println("\n" + "Найти средний возраст всех женщин.");
+        int ageCount = 0;
+        int womanPerson = 0;
+        for (Person woman : personList) {
+            if (woman.getIsMale('Ж')) {
+                ageCount += woman.getAge();
+                System.out.println(woman);
+                womanPerson++;
 
+            }
+        }
+        System.out.println("Количество женщин " + womanPerson);
+        System.out.println("Средний возраст женщин " + ageCount / womanPerson);
     }
 }
