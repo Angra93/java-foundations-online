@@ -20,11 +20,23 @@ class MyArrayListTest {
     @Test
     public void shouldHaveCorrectContains() {
         MyArrayList actualList = new MyArrayList();
-        actualList.contains(new Object());
+        String str = "Hello";
+        actualList.add(str);
 
-       // assertTrue(actualList.contains(new Object())); тут сложновато приходится (
 
+        assertTrue(actualList.contains(str));
 
     }
-
+    @Test
+    public void shouldHaveCorrectAdd(){
+        MyArrayList arrayList = new MyArrayList();
+        assertTrue(arrayList.add(arrayList));
+    }
+    @Test
+    public void shouldHaveCorrectCleaner(){
+        MyArrayList arrayList = new MyArrayList();
+        arrayList.add("Hello");
+        arrayList.clear();
+        assertEquals(0, arrayList.size());
+    }
 }

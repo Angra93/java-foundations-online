@@ -1,7 +1,5 @@
 package ru.itsjava.collections.lists.arrayList;
 
-import java.util.Arrays;
-
 public class MyArrayList {
     private static final int DEFAULT_CAPACITY = 10;
     private int realSize;
