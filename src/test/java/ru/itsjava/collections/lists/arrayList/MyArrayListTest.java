@@ -23,15 +23,16 @@ class MyArrayListTest {
         String str = "Hello";
         actualList.add(str);
 
-
         assertTrue(actualList.contains(str));
 
     }
+    @DisplayName(" Корректно проверяет на добавление объекта")
     @Test
     public void shouldHaveCorrectAdd(){
         MyArrayList arrayList = new MyArrayList();
         assertTrue(arrayList.add(arrayList));
     }
+    @DisplayName(" Корректно проверяет на очистку массива")
     @Test
     public void shouldHaveCorrectCleaner(){
         MyArrayList arrayList = new MyArrayList();
